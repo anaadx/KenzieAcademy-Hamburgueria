@@ -1,0 +1,61 @@
+.btn{
+    font-size: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--darkGreen);
+    color: white;
+
+    transition: .4s;
+    width: min-content;
+}
+
+.btn.absolute{
+    position: absolute;
+    top: 13.5%;
+    left: 78.5%;
+}
+
+.totalButtonCart{
+    font-size: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--darkGreen);
+    color: white;
+
+    transition: .4s;
+    width: 100%;
+}
+
+.btn:hover{
+    background-color: var(--grey3);
+    color: var(--grey1);
+}
+
+.totalButtonCart:hover{
+    background-color: var(--grey3);
+    color: var(--grey1);
+}
+
+.buttonRemoveCart{
+    border: none;
+    background-color: var(--grey4);
+    align-self: baseline;
+    color: var(--grey2);
+    transition: .4s;
+}
+
+.buttonRemoveCart:hover{
+    color: black;
+}

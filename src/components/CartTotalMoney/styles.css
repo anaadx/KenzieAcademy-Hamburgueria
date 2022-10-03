@@ -1,0 +1,17 @@
+.totalCart{
+    border-top: solid 2px var(--grey3);
+    background-color: var(--grey4);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    height: 80px;
+    justify-content: space-between;
+}
+
+.totalWrittenCart{
+    display: flex;
+    justify-content: space-between;
+}
+

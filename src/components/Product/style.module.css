@@ -1,0 +1,22 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--grey3);
+    justify-content: space-between;
+    width: 250px;
+}
+
+.cardImg{
+    width: 150px;
+    align-self: center;
+}
+
+.written{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}

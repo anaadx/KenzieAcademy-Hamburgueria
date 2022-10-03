@@ -1,0 +1,28 @@
+.productCart{
+    width: 100%;
+    /* padding: 10px; */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--grey4);
+}
+
+.imgCart{
+    width: 80px;
+    max-width: 80px;
+    min-width: 80px;
+    align-self: center;
+}
+
+.nameCatCart{
+    align-self: baseline;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+    max-width: 35%;
+}
+
+
+
+
