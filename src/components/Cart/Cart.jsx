@@ -16,12 +16,13 @@ function Cart({currentSale, setCurrentSale}) {
         <div className='titleCart'>
             <h2>Carrinho de Compras</h2>
         </div>
-        {/* {currentSale <= 0 ? (
+        {currentSale.length === 0 ? (
         <div className='emptyCart'>
             <h3>Sua sacola está vazia</h3>
             <p>Adicione Itens</p>
         </div>
-        ) : ( */}
+        ) : (
+          <>
           <ul className='ulCart'>
           {currentSale.map((item) => {
         const itemId = Math.round(Math.random() * 1000)
@@ -32,8 +33,8 @@ function Cart({currentSale, setCurrentSale}) {
           })}
           </ul>
           <CartTotalMoney currentSale={currentSale}/>
-        {/* )
-        } */}
+          </>
+)}
     </div>
   )
 }

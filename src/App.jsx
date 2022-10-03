@@ -27,7 +27,11 @@ useEffect(() => {
 
 function handleClick(productId){
   const selectedProduct = products.find(element => element.id === productId)
-  setCurrentSale([...currentSale, selectedProduct])
+  if(currentSale.includes(selectedProduct)){
+    alert("item ja existe")
+  }else{
+    setCurrentSale([...currentSale, selectedProduct])
+  }
 }
 
   return (

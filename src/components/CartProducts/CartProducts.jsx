@@ -2,9 +2,10 @@ import React from 'react'
 import './styles.css'
 
 function CartProducts({item, onDelete}) {
-  const itemId = Math.round(Math.random() * 1000)
+  const itemKey = Math.round(Math.random() * 1000)
+  console.log(item)
   return (
-    <li className='productCart' id={item.id} key={itemId}>
+    <li className='productCart' id={item.id} key={itemKey}>
       <img className='imgCart' src={item.img} alt='imagem produto'></img>
       <div className='nameCatCart'>
       <h2 className='title1Cart'>{item.name}</h2>
