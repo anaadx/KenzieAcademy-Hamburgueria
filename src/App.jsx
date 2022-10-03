@@ -3,14 +3,15 @@ import '../src/styles/index.css';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 import List from './components/List/List';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 function App() {
 
 const [products, setProducts] = useState([]);
 // const [filteredProducts, setFilteredProducts] = useState([]);
 const [currentSale, setCurrentSale] = useState([])
-// const [cartTotal, setCartTotal] = useState(0)
 
 useEffect(() => {
   fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
@@ -19,16 +20,10 @@ useEffect(() => {
   .catch((err) => console.log(err));
 }, [])
 
-// function showProducts (){
-   
-// }
-// console.log(products)
-// console.log(currentSale)
-
 function handleClick(productId){
   const selectedProduct = products.find(element => element.id === productId)
   if(currentSale.includes(selectedProduct)){
-    alert("item ja existe")
+    toast.error('Item já foi adicionado!');
   }else{
     setCurrentSale([...currentSale, selectedProduct])
   }
@@ -43,6 +38,7 @@ function handleClick(productId){
        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale}/>
       </main>
       </div>
+      <Toaster/>
     </div>
   );
 }
