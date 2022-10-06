@@ -1,9 +1,13 @@
 import React from 'react'
 import './styles.css'
 
-function CartTotalMoney({currentSale}) {
+function CartTotalMoney({currentSale, setCurrentSale}) {
 
   const valores = currentSale.reduce((acc, cur) => acc + cur.price, 0).toFixed(2)
+
+  function removeAll(){
+    setCurrentSale([])
+  }
 
   return (
     <div className='totalCart'>
@@ -11,7 +15,7 @@ function CartTotalMoney({currentSale}) {
             <h3>Total</h3>
             <p>R${valores}</p>
         </div>
-        <button className='totalButtonCart'>Remover Todos</button>
+        <button className='totalButtonCart' type='button' onClick={() => removeAll()}>Remover Todos</button>
     </div>
   )
 }

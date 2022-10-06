@@ -32,7 +32,7 @@ function Cart({currentSale, setCurrentSale}) {
           key={itemId}/>
           })}
           </ul>
-          <CartTotalMoney currentSale={currentSale}/>
+          <CartTotalMoney currentSale={currentSale} setCurrentSale={setCurrentSale}/>
           </>
 )}
     </div>
